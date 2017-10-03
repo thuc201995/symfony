@@ -1,0 +1,3 @@
+project.name.not_blank: Trường này không được để trống.
+project.length.min: "Bạn phải nhập ít nhất {{ limit }} ký tự"
+project.length.max: "Bạn chỉ có thể nhập tối đa {{ limit }} ký tự"

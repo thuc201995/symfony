@@ -1,0 +1,34 @@
+index.dashboard: Dashboard
+index.home: Home
+index.create: Create Project
+index.option: Option
+index.delete: Delete selection
+index.language: Language
+index.managerUser: Manager User
+index.addUser: Add User
+index.listProject: List Projects
+index.tblProject.select: Select
+form.project.name: Project name
+form.project.start: Start
+form.project.end: End
+form.project.implementer: implementer
+form.project.content: Content
+form.project.status: Status
+form.project.status.finished: Finished
+form.project.status.unfinished: Unfinished
+btn.editProject: Save
+btn.createProject: Create
+btn.resetProject: Reset
+btn.cancelProject: Cancel
+index.tblProject.name: Project name
+index.tblProject.createdAt: Created at
+index.tblProject.updatedAt: Updated at
+index.tblProject.status: Status
+index.tblProject.action: Action
+session.success.message: Data has been updated
+
+
+
+
+
+

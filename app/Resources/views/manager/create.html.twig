@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+  <div class="content">
+        <div class="container">
+          <div class="row">
+              <div class="col-sm-12">
+                                    
+                  <div class="page-title-box">
+                      <h4 class="page-title">{{"index.create"|trans}}</h4>
+                      <ol class="breadcrumb float-right">
+                          <li class="breadcrumb-item"><a href="{{path('index')}}">{{"index.home"|trans}}</a></li>
+                          <li class="breadcrumb-item active">{{"index.create"|trans}}</li>
+                      </ol>
+                      <div class="clearfix"></div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="card-box col-sm-12">
+
+         <div class="col-lg-8 col-sm-12">
+			{{ form_start(form) }}
+			  	{{ form_label(form.name) }}
+	            {{ form_errors(form.name) }}
+	            {{ form_widget(form.name) }}
+		<br>
+			<div class="form-group form-inline row">
+				<div class="col-lg-6">
+				<b>{{"form.project.start"|trans}}</b>
+	            {{ form_errors(form.start) }}
+	            {{ form_widget(form.start,{'attr': {'class':'col-lg-11'}}) }}
+				</div>
+				<div class="col-lg-6">
+				<b>{{"form.project.end"|trans}}</b>
+	        
+	            {{ form_errors(form.end) }}
+	            {{ form_widget(form.end,{'attr': {'class':'col-lg-11'}}) }}
+		</div>
+			</div>
+	        
+	            {{ form_label(form.performer) }}
+	            {{ form_errors(form.performer) }}
+	            {{ form_widget(form.performer) }}
+
+	            {{ form_label(form.content) }}
+	            {{ form_errors(form.content) }}
+	            {{ form_widget(form.content) }}
+				
+				<br>
+				<div class="form-group">
+	           <button class="btn btn-primary" type="submit">{{"btn.createProject"|trans}}</button>
+	           <button class="btn btn-default" type="reset">{{"btn.resetProject"|trans}}</button>
+	           		<a href="{{path("index")}}" class="btn btn-danger">{{"btn.cancelProject"|trans}}</a>
+				
+				</div>
+
+	        
+	 
+
+		  	{{ form_end(form) }} 
+		</div>
+	</div>
+        <!-- end container -->
+    </div>
+    <!-- end content -->
+  </div>
+  <ul id="menu-option2">
+        <a href="{{path("index")}}"><img src="{{asset("img/home.svg")}}" alt="" width="55px" height="55px" data-toggle="tooltip" title="{{"index.home"|trans}}"></a>
+        
+    </ul>
+{% endblock %}

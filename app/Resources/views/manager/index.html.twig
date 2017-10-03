@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+{% block title %}{% endblock %}
+{% block  css %}
+    <link rel="stylesheet" type="text/css" href="{{asset('css/jquery.datatable.css')}}">
+
+{% endblock %}
+{% block content %}
+    <!-- Start content -->
+<div class="content">
+        <div class="container">
+          <div class="row">
+              <div class="col-sm-12">
+                  <div class="page-title-box">
+                      <h4 class="page-title">{{"index.listProject"|trans}}</h4>
+                     
+                      <div class="clearfix"></div>
+                  </div>
+              </div>
+          </div>
+          <div class="card-box col-sm-12">
+          <div class="table-responsive">
+          <form action="/delete" method="POST" id="formDelete">
+              <input type="hidden" name="_csrf_token" value="{{ csrf_token('csrf_provider') }}">
+                      <input type="hidden" name="_method" value="DELETE">
+            
+             <table id="tabl_project" class="display " cellspacing="0" width="100%">
+                  <thead>
+                      <tr>
+                          <th></th>
+                          <th>ID</th>
+                          <th>{{"index.tblProject.name"|trans}}</th>
+                          <th>{{"index.tblProject.status"|trans}}</th>
+                          <th>{{"index.tblProject.createdAt"|trans}}</th>
+                          <th>{{"index.tblProject.updatedAt"|trans}}</th>
+                          <th>{{"index.tblProject.action"|trans}}</th>
+                          <th>{{"index.tblProject.select"|trans}}</th>
+                          
+                      </tr>
+                  </thead>
+                  <tfoot>
+                      <tr>
+                          <th></th>
+                          <th>ID</th>
+                          <th>{{"index.tblProject.name"|trans}}</th>
+                          <th>{{"index.tblProject.status"|trans}}</th>
+                          <th>{{"index.tblProject.createdAt"|trans}}</th>
+                          <th>{{"index.tblProject.updatedAt"|trans}}</th>
+                          <th>{{"index.tblProject.action"|trans}}</th>
+                          <th>{{"index.tblProject.select"|trans}}</th>
+
+                      </tr>
+                  </tfoot>
+              </table>
+            </form>
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end content -->
+  </div>
+
+</div>
+
+
+{% block setting %}
+
+
+  <a id="menu-option" href="{{path("create")}}">
+       <img src="{{asset("img/create2.svg")}}" alt="" width="55px" height="55px" data-toggle="tooltip" title="{{"index.create"|trans}}">
+  </a>
+
+    <div class="menu-option5" id="delete">
+       <img src="{{asset("img/remove.svg")}}" alt="" width="55px" height="55px" data-toggle="tooltip" title="{{"index.delete"|trans}}">
+    </div>
+
+        {% for message in app.flashes('success') %}
+            {% if message is defined %}
+              <div id="success" style="display:none">{{message}}</div>
+            {% endif %}
+        {% endfor %} 
+{% endblock %}
+ 
+
+     
+{% block script %}
+        <script src="{{asset('js/jquery.datatable.min.js')}}"></script>
+
+        <script src="{{asset('js/index.js')}}"></script>
+  
+{% endblock %}
+{% endblock %}

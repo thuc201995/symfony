@@ -1,0 +1,3 @@
+project.not_blank: This value should not be blank
+project.length.min: "This value must be at least {{ limit }} characters long"
+project.length.max: "This value cannot be longer than {{ limit }} characters"

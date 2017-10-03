@@ -1,0 +1,30 @@
+index.dashboard: Bảng điều khiển
+index.home: Trang chủ
+index.create: Tạo dự án
+index.option: Tuỳ chọn
+index.delete: Xoá lựa chọn
+index.language: Chọn ngôn ngữ
+index.managerUser: Quản lý user
+index.addUser: Thêm user
+index.listProject: Danh sách dự án
+index.tblProject.select: Chọn
+form.project.name: Tên dự án
+form.project.start: Ngày bắt đầu
+form.project.end: Ngày kết thúc
+form.project.implementer: Người thực hiện
+form.project.content: Nội dung dự án
+form.project.status: Trạng thái
+form.project.status.finished: Hoàn thành
+form.project.status.unfinished: Chưa hoàn thành
+btn.editProject: Lưu thay đổi
+btn.createProject: Tạo dự án
+btn.resetProject: Làm lại
+btn.cancelProject: Huỷ
+index.tblProject.name: Tên dự án
+index.tblProject.createdAt: Ngày tạo
+index.tblProject.updatedAt: Cập nhật lần cuối
+index.tblProject.status: Trạng thái
+index.tblProject.action: Tuỳ chọn
+session.success.message: Dữ liệu đã được cập nhật
+
+
